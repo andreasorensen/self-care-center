@@ -54,6 +54,11 @@ rcvMsgBtn.addEventListener('click', function() {
     hideIcon();
 });
 
+clearMsgBtn.addEventListener('click', function() {
+    clearMessage();
+    showIcon();
+})
+
 // event handlers & functions:
 
 function randomizeMessage(array) {
@@ -77,17 +82,30 @@ function createMessage() {
 function hideIcon() {
     if (mantra.checked || affirmation.checked){
         buddhaIcon.classList.add('hidden');
-    } clearMsgBtn.classList.remove('hidden')
+    }
   }
 
-// function displayClrBtn() {
-//     clearMsgBtn.classList.remove('hidden')
-// }
+  function showIcon() {
+    buddhaIcon.classList.remove('hidden')
+  }
 
 function displayMessage() {
     showMessage.innerText = message;
-    return message
+    clearMsgBtn.classList.remove('hidden');
+    rcvMsgBtn.classList.add('hidden');
 }
+
+function clearMessage() {
+    showMessage.innerText = '';
+    clearMsgBtn.classList.add('hidden');
+    rcvMsgBtn.classList.remove('hidden');
+}
+
+// if (mantra.checked) {
+//     mantra.checked === false;
+// } if (affirmation.checked) {
+//     affirmation.checked === false;
+// }
 
 
 
