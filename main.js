@@ -33,18 +33,20 @@ var mantras = [
     "I will speak with confidence and self-assurance.", 
     "My commitment to myself is unbreakable."
 ];
+
+//variables: 
+
 var mantraChoice = document.querySelector('#mantra-choice');
 var affirmationChoice = document.querySelector('#affirmation-choice');
 var showMessage = document.querySelector("#show-message");
 var buddhaIcon = document.querySelector('.buddha-icon');
-
 var message;
 
-//buttons:
+    //buttons:
 
 var rcvMsgBtn = document.querySelector("#msg-btn");
 var mantra = document.querySelector("#mantra-choice");
-var affirmation = document.querySelector('#affirmation-choice')
+var affirmation = document.querySelector('#affirmation-choice');
 var clearMsgBtn = document.querySelector("#clr-btn");
 
 //event listeners:
@@ -67,27 +69,33 @@ function randomizeMessage(array) {
 
 function createMessage() {
     if (mantra.checked) {
-        message = mantras[randomizeMessage(mantras)];
-        displayMessage();
-    }
-    else if (affirmation.checked) {
-        message = affirmations[randomizeMessage(affirmations)];
-        displayMessage();
+        createAffirmation();
+    } else if (affirmation.checked) {
+        createAffirmation();
     } else {
         alert("✨ Please make a selection to display message! ✨")
     }
 }
 
+function createAffirmation() {
+    message = affirmations[randomizeMessage(affirmations)];
+    displayMessage();
+}
+
+function createMantra() {
+    message = mantras[randomizeMessage(mantras)];
+    displayMessage();
+}
 
 function hideIcon() {
     if (mantra.checked || affirmation.checked){
         buddhaIcon.classList.add('hidden');
     }
-  }
+}
 
-  function showIcon() {
+function showIcon() {
     buddhaIcon.classList.remove('hidden')
-  }
+}
 
 function displayMessage() {
     showMessage.innerText = message;
@@ -99,26 +107,13 @@ function clearMessage() {
     showMessage.innerText = '';
     clearMsgBtn.classList.add('hidden');
     rcvMsgBtn.classList.remove('hidden');
+    clearChoice();
 }
 
-// if (mantra.checked) {
-//     mantra.checked === false;
-// } if (affirmation.checked) {
-//     affirmation.checked === false;
-// }
-
-
-
-
-
-
-    //needs to hide the buddha icon -- line 28 htmlu
-    //which means "removve hidden" from random index position of array, based on which radio button is selected...
-    //
-
-
-    // how can i join the rcvMsgBtn eventListener(aka, click) with the disappearing w/"#icon-display" -- (save it in a variable?) -- need to specify that
-
+function clearChoice() {
+    affirmation.checked = false;
+    mantra.checked = false;
+}
 
 
 
