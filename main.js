@@ -1,3 +1,4 @@
+//variables: 
 var affirmations = [
     "I am love. I am purpose. I was made with divine intention.", 
     "I am worthy of what I desire.", 
@@ -33,24 +34,19 @@ var mantras = [
     "I will speak with confidence and self-assurance.", 
     "My commitment to myself is unbreakable."
 ];
-
-//variables: 
-
 var mantraChoice = document.querySelector('#mantra-choice');
 var affirmationChoice = document.querySelector('#affirmation-choice');
 var showMessage = document.querySelector("#show-message");
 var buddhaIcon = document.querySelector('.buddha-icon');
 var message;
 
-    //buttons:
-
+//buttons:
 var rcvMsgBtn = document.querySelector("#msg-btn");
 var mantra = document.querySelector("#mantra-choice");
 var affirmation = document.querySelector('#affirmation-choice');
 var clearMsgBtn = document.querySelector("#clr-btn");
 
 //event listeners:
-
 rcvMsgBtn.addEventListener('click', function() {
     createMessage();
     hideIcon();
@@ -59,10 +55,9 @@ rcvMsgBtn.addEventListener('click', function() {
 clearMsgBtn.addEventListener('click', function() {
     clearMessage();
     showIcon();
-})
+});
 
 // event handlers & functions:
-
 function randomizeMessage(array) {
     return Math.floor(Math.random() * array.length);
 };
@@ -75,23 +70,23 @@ function createMessage() {
     } else {
         alert("✨ Please make a selection to display message! ✨")
     }
-}
+};
 
 function createAffirmation() {
     message = affirmations[randomizeMessage(affirmations)];
     displayMessage();
-}
+};
 
 function createMantra() {
     message = mantras[randomizeMessage(mantras)];
     displayMessage();
-}
+};
 
 function hideIcon() {
     if (mantra.checked || affirmation.checked){
         buddhaIcon.classList.add('hidden');
     }
-}
+};
 
 function showIcon() {
     buddhaIcon.classList.remove('hidden')
@@ -101,19 +96,19 @@ function displayMessage() {
     showMessage.innerText = message;
     clearMsgBtn.classList.remove('hidden');
     rcvMsgBtn.classList.add('hidden');
-}
+};
 
 function clearMessage() {
     showMessage.innerText = '';
     clearMsgBtn.classList.add('hidden');
     rcvMsgBtn.classList.remove('hidden');
     clearChoice();
-}
+};
 
 function clearChoice() {
     affirmation.checked = false;
     mantra.checked = false;
-}
+};
 
 
 
