@@ -15,33 +15,20 @@ The spec for this project can be found [here](https://frontend.turing.io/project
 - Understand how to listen to and respond to user events
 - Individualize your programming skill set
 
-## Setup
-
-- Fork this project to your own Github account
-- Clone the repository to your local machine
-- `cd` into the project
-- Read this README thoroughly, then begin working!
-
-______________________________________________________  
-# README Template  
-Before turning this project in, erase this line and everything above it and fill in the info below.  
-______________________________________________________  
 
 # Self-Care Center 
 
 ### Abstract:
 [//]: <> (Briefly describe what you built and its features. What problem is the app solving? How does this application solve that problem?)
-//In this project I built an app/website that displays a random mantra or affirmation depending on the user's input. They could choose one of two radio buttons, then click the receive message button & the message of their choice would be displayed. I used an alert box for error handling, which appears when the user tries to receive a message without making a selection. I also create a disappearing clear button, which can only be seen/used when a message is displayed. I suppose it's solving the problem of wanting a random daily mantra or affirmation, quickly without reading website after website... This app makes it easy & readily available.
+//In this project I built an app/website using a COMP that displays a random mantra or affirmation depending on the user's input. Useres can choose one of two radio buttons, click the receive message button & the message of their choice would be displayed. I used an alert box for error handling, which appears when the user tries to receive a message without making a selection. I also create a clear button, which appears when the message appears & is hidden when no message is showing. This problem solves the problem of wanting a random daily mantra or affirmation, quickly without reading website after website... This app makes it easy & readily available.
 
 ### Installation Instructions:
 [//]: <> (What steps does a person have to take to get your app cloned down and running?)
-They simply need to fork a copy from my github (git@github.com:andreasorensen/self-care-center.git) then clone it down into their local machine or they can run it directly from the following URL: file:///Users/andreasorensen/turing/mod1/self-care-center/index.html
+They simply need to fork a copy from my github (git@github.com:andreasorensen/self-care-center.git) then clone it down into their local machine or they can run it directly from the following URL: file:///Users/andreasorensen/turing/mod1/self-care-center/index.html.
 
 
 ### Preview of App:
 [//]: <> (Provide ONE gif or screenshot of your application - choose the "coolest" piece of functionality to show off.)
-
-
 
 ### Context:
 [//]: <> (Give some context for the project here. How long did you have to work on it? How far into the Turing program are you?)
